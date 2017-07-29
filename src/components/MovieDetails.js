@@ -11,7 +11,7 @@ const MovieDetails = (props) => {
 		document.body.classList.add('backdrop');
 		document.body.style = `background-image: url(${backdropURL});
 														background-size: cover;
-														background-repeat: no-repeat
+														background-repeat: no-repeat;
 														`;
 	} else {
 		document.body.style = 'background-color: #242424';
@@ -37,12 +37,8 @@ const MovieDetails = (props) => {
 	}
 
 	return (
-		<div className="movie-details row">						
-			<div className="col-md-5 poster-container">
-				<img className="poster" src={'https://image.tmdb.org/t/p/w500' + movieData.poster_path} alt=""/>
-			</div>
-
-			<div className="col-md-7 details-container">
+		<div className="movie-details row">
+			<div className="col-md-7 col-md-push-5 col-sm-7 col-sm-push-5 details-container">
 				<h1>{movieData.title}</h1>
 
 				<h2 className="genres">
@@ -56,28 +52,32 @@ const MovieDetails = (props) => {
 				<p className="overview-content">{ movieData.overview }</p>
 
 				<div className="row">
-					<div className="col-md-6">
+					<div className="col-md-6 col-sm-6 col-xs-6">
 						<h3>Release Date:</h3>
 						<p>{ movieData.release_date }</p>
 					</div>
 
-					<div className="col-md-6">
+					<div className="col-md-6 col-sm-6 col-xs-6">
 						<h3>Running Time:</h3>
 						<p>{ movieData.runtime } mins</p>
 					</div>
 				</div>
 
 				<div className="row">
-					<div className="col-md-6">
+					<div className="col-md-6 col-sm-6 col-xs-6">
 						<h3>Box Office:</h3>
 						<p>{ revenue }</p>
 					</div>
 
-					<div className="col-md-6">
+					<div className="col-md-6 col-sm-6 col-xs-6">
 						<h3>Vote Average:</h3>
 						<p>{ vote_average }</p>
 					</div>
 				</div>
+			</div>
+
+			<div className="col-md-5 col-md-pull-7 col-sm-5 col-sm-pull-7 poster-container">
+				<img className="poster" src={'https://image.tmdb.org/t/p/w500' + movieData.poster_path} alt=""/>
 			</div>
 		</div>
 

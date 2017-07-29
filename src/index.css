@@ -1,19 +1,23 @@
+html {
+  height: 100%; }
+
 body {
   height: 100%;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background: #0c0c0c; }
 
 .backdrop::before {
   content: '';
+  height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   left: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.2) 40%, #000 90%); }
 
 .App {
-  margin-top: 30px;
-  padding: 0;
+  padding-top: 30px !important;
   color: #f6f6f6; }
 
 /*----------- LOADING TEXT MESSAGE ----------- */
@@ -114,5 +118,23 @@ body {
     .movie-details .details-container p {
       font-size: 18px;
       color: #5acef0; }
+
+@media screen and (max-width: 991px) {
+  .App {
+    padding-bottom: 30px; }
+
+  .details-container {
+    padding-bottom: 30px !important; }
+    .details-container h1 {
+      font-size: 26px; }
+    .details-container h3 {
+      font-size: 20px !important; } }
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+    text-align: center; }
+
+  h2 {
+    text-align: center; } }
 
 /*# sourceMappingURL=index.css.map */

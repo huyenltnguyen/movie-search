@@ -124,9 +124,9 @@ class App extends React.Component {
 
 		return (
 			<div className="App container">
-				<div className="col-md-10 col-md-offset-1">
+				<div className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 					<div className="row">
-						<div className="search-bar col-md-5">
+						<div className="search-bar col-md-5 col-sm-5">
 							<Autosuggest
 				        suggestions={suggestions}
 				        onSuggestionsFetchRequested={ this.onSuggestionsFetchRequested }
