@@ -23,7 +23,8 @@ body {
 /*----------- LOADING TEXT MESSAGE ----------- */
 .loading-text {
   margin-top: 24px;
-  font-size: 36px; }
+  font-size: 36px;
+  color: #f6f6f6; }
 
 /* --------- AUTOSUGGEST -------------- */
 .search-bar {
