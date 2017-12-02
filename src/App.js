@@ -10,7 +10,7 @@ class App extends React.Component {
 		this.state = {
 			value: '',
 			suggestions: [],
-			movieId: '671',
+			movieId: '137116',
 			movieTitles: []
 		};
 	}
@@ -124,11 +124,11 @@ class App extends React.Component {
 
 		return (
 			<div className="App container">
-				<div className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-					<div className="row">
-						<div className="search-bar col-md-5 col-sm-5">
+				<div className="row">
+					<div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 wrapper">
+						<div className="row search-bar">
 							<Autosuggest
-				        suggestions={suggestions}
+				        suggestions={ suggestions }
 				        onSuggestionsFetchRequested={ this.onSuggestionsFetchRequested }
 				        onSuggestionSelected={ this.onSuggestionSelected }
 				        onSuggestionsClearRequested={ this.onSuggestionsClearRequested }
@@ -137,11 +137,16 @@ class App extends React.Component {
 				        inputProps={ inputProps }
 							/>
 						</div>
-					</div>
 
-					<MovieDetails movieData={this.state.selectedMovie} />
+						<MovieDetails movieData={this.state.selectedMovie} />
 					</div>
-			</div>
+				</div>
+
+				<footer className="text-center">
+					<h4>Created by Huyen Nguyen.</h4>
+				</footer>
+		</div>
+
 		);
 	}
 }
