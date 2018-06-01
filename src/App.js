@@ -1,7 +1,7 @@
 //jshint ignore: start
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
-import MovieDetails from './components/MovieDetails'
+import MovieDetails from './components/MovieDetails';
 
 class App extends React.Component {
 	constructor(props) {
@@ -143,7 +143,7 @@ class App extends React.Component {
 				</div>
 
 				<footer className="text-center">
-					<h4>Created by Huyen Nguyen.</h4>
+					<h4>Created by <a href='https://huyenltnguyen.com' target='_blank' rel="noopener noreferrer">Huyen Nguyen</a>.</h4>
 				</footer>
 		</div>
 

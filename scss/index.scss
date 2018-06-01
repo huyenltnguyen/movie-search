@@ -1,8 +1,8 @@
-$text-color: #f6f6f6;
 $bg-color: #ececec;
 $black: #323232;
 $blue: #5acef0;
 $box-shadow: rgba(0, 0, 0, .3);
+$white: #f6f6f6;
 
 html {
   height: 100%;
@@ -17,7 +17,7 @@ body {
 
 
 .App {
-  color: $text-color;
+  color: $white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -58,7 +58,7 @@ body {
   border: none;
   border-bottom: 1px solid #aaa;
   background-color: $black;
-  color: $text-color;
+  color: $white;
 }
 
 .react-autosuggest__input--focused {
@@ -78,7 +78,7 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  color: $text-color;
+  color: $white;
   background-color: $black;
   font-family: Helvetica, sans-serif;
   font-weight: 300;
@@ -151,7 +151,7 @@ body {
     .overview-content {
       font-size: 15px;
       letter-spacing: .4px;
-      color: $text-color;
+      color: $white;
     }
 
     p {
@@ -234,7 +234,7 @@ footer h4 {
   }
 
   footer h4 {
-    color: $text-color;
+    color: $white;
   }
 
 }
