@@ -20,26 +20,51 @@ class App extends React.Component {
 	}
 
 	getMovieData = () => {
-		const url = `https://api.themoviedb.org/3/movie/${this.state.movieId}?&api_key=`;
-
-		return fetch(url)
-					.then(response => response.json())
-					.then(responseJson => {
-						this.setState({ selectedMovie: responseJson });
-						//console.log('fetched selected movie data:', this.state.selectedMovie);
-					});
-
+		// themoviedb api has been moved to server side
+    // and can be used by sending a POST request
+    // with an appName and a movie id
+		fetch('https://whispering-bolt.glitch.me/api', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				appName: 'movie search app',
+				movieId: this.state.movieId
+			})
+		})
+		.then(response => response.json())
+		.then(json => {
+			// response is a json containing a message
+			// and the data the third-party api sends back
+			// { message: 'blah blah', data: {} }
+			this.setState({ selectedMovie: json.data });
+		})
+		.catch(err => console.error(err));
 	}
 
 	getMovieTitles = () => {
-		const url = `https://api.themoviedb.org/3/search/movie?query=${this.state.value}&api_key=`;
-
-		return fetch(url)
-						.then(response => response.json())
-						.then(responseJson => {
-							this.setState({ movieTitles: responseJson.results.slice(0, 10) });
-							//console.log('fetched movie titles for search:', this.state.movieTitles);
-						});
+		// themoviedb api has been moved to server side
+    // and can be used by sending a POST request
+    // with an appName and a movie id
+		fetch('https://whispering-bolt.glitch.me/api', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				appName: 'movie search app',
+				movieTitle: this.state.value
+			})
+		})
+		.then(response => response.json())
+		.then(json => {
+			// response is a json containing a message
+			// and the data the third-party api sends back
+			// { message: 'blah blah', data: {} }
+			this.setState({ movieTitles: json.data.results.slice(0, 10) });
+		})
+		.catch(err => console.error(err));
 	}
 
 	// Change value everytime input changes
