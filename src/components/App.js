@@ -1,7 +1,6 @@
-//jshint ignore: start
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
-import MovieDetails from './components/MovieDetails';
+import MovieDetails from './MovieDetails';
 
 class App extends React.Component {
 	constructor(props) {
