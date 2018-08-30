@@ -19,7 +19,7 @@
     "concurrently": "^3.5.0",
     "eslint": "^4.3.0",
     "eslint-plugin-react": "^7.1.0",
-    "gh-pages": "^1.0.0",
+    "gh-pages": "^1.2.0",
     "react-autocomplete": "^1.5.10",
     "react-autosuggest": "^9.3.1"
   },
